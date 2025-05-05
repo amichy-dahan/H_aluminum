@@ -1,0 +1,428 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e99292;
+    direction: rtl;
+  }
+  
+
+  .containerA {
+    
+    margin: 0 auto;
+    margin-top: 3px;
+    padding: 40px;
+    text-align: center;
+    background: white;
+    box-shadow: 22px 22px 20px rgba(0, 0, 0, 0.15); /* כאן אנחנו מוסיפים את הצל */
+
+  }
+  
+  .containerB {
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3)),
+    url('images/4.jpg');
+background-size: cover;
+background-position: center;
+box-shadow: 10px 10px 20px rgb(0, 0, 0);
+
+padding-top: 20px;  /* מוסיף ריווח סביר מלמעלה */
+padding-bottom: 20px; /* כדי שהקרוסלה לא "תיתקע" באמצע */
+margin-top: 0 !important; /* מבטל מרווח עליון מוגזם */
+height: 870px;
+  }
+  .containerC {
+    
+
+box-shadow: 10px 10px 20px rgb(0, 0, 0);
+
+background-color: #f8f9fa;
+
+  }
+  .sec-container {
+   
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Heebo', sans-serif;
+   
+    color: rgb(254, 253, 253)s;
+    font-weight: 1000;
+    background-size: 800% 800%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 255)),
+    url('images/15.jpg');
+background-size: cover;
+background-position: center;
+
+  
+  }
+  #carouselExample {
+    max-width: 80%;
+    height: 400px;
+  }
+ 
+  .H-image{
+    width: 180px;
+    height:180px;
+    animation: spinAndStop 5s ease-out, scaleAnimation 3s ease-in-out infinite;
+    transform-style: preserve-3d;
+  }
+  .Image-H1{
+    width: 80px;
+    height:80px;
+   
+  }
+  
+  @keyframes spinAndStop {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  /* הגדלה והקטנה אוטומטית */
+  @keyframes scaleAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+ 
+  
+  /* תגובה למסכים קטנים (ניידים) */
+  @media (max-width:600px) {
+    .container {
+      padding: 10px;
+    }
+    .containerA {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+  .pA{
+color: #413515;
+    font-weight: 1000;
+    font-size: 30px;
+  }
+  .pB{
+color: #017c41;
+    font-weight: 1000;
+    font-size: 20px;
+  }
+  .pB1{
+    color: #00562c;
+        font-weight: 1000;
+        font-size: 28px;
+        font-family: 'Heebo', sans-serif;
+        margin-top: 30px;
+      }
+
+
+  
+  .content {
+    height: 150vh; /* גובה גדול כדי שיהיה מה לגלול */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* העיצוב של הטקסט שמופיע מימין */
+  .animated-text {
+    position: relative;
+    transform: translateX(100%); /* מתחיל מחוץ למסך מצד ימין */
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+   
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 5px;
+    /* נמנע מצב שהטקסט יוצא מכלל הראות */
+    max-width: 100%;
+  }
+  
+  /* כאשר האלמנט יופיע */
+  .animated-text.show {
+    transform: translateX(0); /* עובר למקום הרגיל */
+    opacity: 1;
+  }
+  
+  /* Media Queries עבור מסכים קטנים (טלפונים) */
+  @media (max-width: 768px) {
+    .animated-text {
+      font-size: 3rem; /* גודל טקסט קטן יותר */
+      padding: 15px; /* ריווח קטן יותר */
+      width: 80%; /* רוחב מותאם למסך קטן */
+      margin-top: 10px; /* ריווח קטן יותר מהחלק העליון */
+    }
+  }
+  
+  /* Media Queries עבור מסכים מאוד קטנים (כמו סמארטפונים) */
+  @media (max-width: 480px) {
+    .animated-text {
+      font-size: 2rem; /* גודל טקסט קטן עוד יותר */
+      padding: 10px;
+      width: 90%; /* רוחב מותאם יותר למסך הקטן */
+      margin-top: 20px;
+    }
+  }
+ 
+
+    /* העיצוב של הטקסט שמופיע מימין */
+    .animated-text1 {
+      position: relative;
+      transform: translateX(100%); /* מתחיל מחוץ למסך מצד ימין */
+      opacity: 0;
+      transition: transform 1s ease-out, opacity 1s ease-out;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      padding: 10px;
+     
+      width: fit-content;
+      margin: 0 auto;
+      margin-top: 5px;
+      /* נמנע מצב שהטקסט יוצא מכלל הראות */
+      max-width: 100%;
+    }
+    
+    /* כאשר האלמנט יופיע */
+    .animated-text1.show {
+      transform: translateX(0); /* עובר למקום הרגיל */
+      opacity: 1;
+    }
+    
+    /* Media Queries עבור מסכים קטנים (טלפונים) */
+    @media (max-width: 768px) {
+      .animated-text1 {
+        font-size: 3rem; /* גודל טקסט קטן יותר */
+        padding: 15px; /* ריווח קטן יותר */
+        width: 80%; /* רוחב מותאם למסך קטן */
+        margin-top: 10px; /* ריווח קטן יותר מהחלק העליון */
+      }
+    }
+    
+    /* Media Queries עבור מסכים מאוד קטנים (כמו סמארטפונים) */
+    @media (max-width: 480px) {
+      .animated-text1 {
+        font-size: 2rem; /* גודל טקסט קטן עוד יותר */
+        padding: 10px;
+        width: 90%; /* רוחב מותאם יותר למסך הקטן */
+        margin-top: 20px;
+      }
+    }
+
+
+
+  .btn-animated {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #28a745; /* צבע ירוק */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* מעבר חלק */
+  }
+
+  /* אנימציה של הגדלה/הקטנה */
+  .btn-animated:hover {
+    transform: scale(1.1); /* כשתעבור עם העכבר - הכפתור יגדל ב־10% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* צל נוסף כשהכפתור מואר */
+  }
+
+  /* אנימציה של הבהוב */
+  @keyframes pulse {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+
+  .btn-pulse {
+    animation: pulse 2.5s infinite; /* הבהוב אינסופי */
+  }
+  .accessibility-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .accessibility-btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* תפריט נגישות */
+  .accessibility-menu {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none; /* התפריט מוסתר בברירת מחדל */
+    z-index: 9999;
+  }
+
+  .accessibility-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .accessibility-menu li {
+    margin: 10px 0;
+  }
+
+  .accessibility-menu button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .accessibility-menu button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+  .icon-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 2rem;
+  }
+
+  .icon-box {
+    text-align: center;
+    color: white;
+    width: 100px;
+  }
+
+  .icon-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .icon-box p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .icon-row {
+      flex-direction: column; /* שים אותם אחד מתחת לשני */
+      gap: 20px; /* רווח קטן יותר */
+    }
+
+    .icon-box i {
+      font-size: 30px;
+    }
+
+    .icon-box p {
+      font-size: 14px;
+    }
+  }
+  .instagram-icon {
+    position: fixed;
+    top: 0px;
+    left: 2px; /* או right: 10px אם אתה רוצה בצד ימין */
+    z-index: 9999;
+    font-size: 30px;
+    color: #e1306c; /* צבע אינסטגרם */
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+
+  .instagram-icon:hover {
+    transform: scale(1.1);
+  }
+
+
+  .carousel-inner {
+    min-height: 200px;
+    direction: rtl; /* כדי שהתוכן יהיה מיושר מימין לשמאל */
+  }
+  .carousel-item p {
+    margin-bottom: 0.5rem;
+  }
+
+  .high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+  
+  .high-contrast .containerA,
+  .high-contrast .containerB,
+  .high-contrast .containerC,
+  .high-contrast .sec-container,
+  .high-contrast .accessibility-menu,
+  .high-contrast .icon-box {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+  
+  .high-contrast p,
+  .high-contrast h1,
+  .high-contrast h2,
+  .high-contrast h3,
+  .high-contrast h4,
+  .high-contrast span,
+  .high-contrast li,
+  .high-contrast button {
+    color: #fff !important;
+    background-color: #000 !important;
+    border-color: #fff !important;
+  }
+  
+  .high-contrast .icon-box i,
+  .high-contrast .instagram-icon {
+    color: #fff !important;
+    background-color: #000 !important;
+  }
